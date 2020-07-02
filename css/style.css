@@ -2,30 +2,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,900&display=swap');
 
+:root{
+    --background-body-sun: #F6F6F6;
+    --background-body-dark: #24262C;
+
+    --background-header-sun: #FFFFFF;
+    --background-header-dark: #1A1A1A;
+
+    --color-full: #FFFFFF;
+    --color-div-sun: #F5F5F5;
+}
+
 body{
     margin: 0;
     padding: 0;
     font-family: Lato;
     display: flex;
-    background: #F6F6F6;
-    
+    background: var(--background-body-sun);
 }
 
+/* Header */
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #FFFFFF;
-    color: #9B9B9B;
+    background: var(--background-header-sun);
+    justify-content: space-evenly;
+    color: var(--color-header-dark);
     height: 100vh;
-/*     padding: 15px;   */
+    padding: 0px 20px; 
     box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
 }
 
+header i{
+    font-size: 25pt;
+}
+
+/* Header */
+
+/* Header .divs */
 header .user{
     border-radius: 50%;
-    padding: 10px;
-    background: #F5F5F5;
+    padding: 15px;
+    margin-top: 20px;
+    background: var(--background-header-dark);
+    color: var(--color-div-sun);
+}
+
+header .user i{
+    font-size: 20pt;
 }
 
 header .menu{
@@ -35,24 +60,61 @@ header .menu{
     justify-content: space-evenly;
     height: 90vh;
 }
+/* Header .divs */
 
+/* Header .divs .divs*/
 header .menu div{
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
+    padding: 10px 10px 0px 10px;
+    border-radius: 7px;
+
 }
 
 header .menu div:hover{
     background: #F5F5F5;
 }
+/* Header .divs .divs*/
 
-header i{
-    font-size: 25pt;
+/* Header .divs .divs .divs*/
+header .mode div i{
+    font-size: 20pt;
 }
 
-header .menu .sun{
+header .mode div{
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: var(--background-header-dark);
+}
+
+header .mode .sun{
     display: none;
 }
+
+.dark-mode-body{
+    background: var(--background-body-dark);
+    color: var(--color-div-sun);
+}
+
+.dark-mode-header{
+    background: var(--background-header-dark);
+    color: var(--color-div-sun);
+}
+
+.dark-mode-header-mode, .dark-mode-header-user{
+    color: var(--background-body-dark);
+}
+
+.sun-ative{
+    display: flex;
+}
+
+.dark-off{
+    display: none;
+}
+/* Header .divs .divs .divs*/
 
