@@ -7,13 +7,21 @@ selectElements('.dark').addEventListener('click', () => {
     selectElements('header').classList.add('dark-mode-header');
     selectElements('.mode i').classList.add('dark-mode-header-mode');
     selectElements('.user i').classList.add('dark-mode-header-user');
-    selectElements('.user i').classList.add('dark-mode-header-user');
     selectElements('div').classList.remove('.dark');
+    selectElements('.off').classList.add('dark-mode-header-menu-div');
+    selectElements('.dark').classList.remove('dark-on');
+    selectElements('.dark').classList.add('dark-off');
+    selectElements('.sun').classList.add('sun-on');
+    selectElements('.sun').classList.remove('sun-off');
 });
 
 selectElements('.sun').addEventListener('click', () => {
     selectElements('body').classList.remove('dark-mode-body');
     selectElements('header').classList.remove('dark-mode-header');
+    selectElements('.dark').classList.add('dark-on');
+    selectElements('.dark').classList.remove('dark-off');
+    selectElements('.sun').classList.remove('sun-on');
+    selectElements('.sun').classList.add('sun-off');
 });
 
 

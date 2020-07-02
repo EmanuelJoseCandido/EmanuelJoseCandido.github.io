@@ -71,11 +71,12 @@ header .menu div{
     text-align: center;
     padding: 10px 10px 0px 10px;
     border-radius: 7px;
-
+    transition: all 650ms ease-in-out;
+    cursor: pointer;
 }
 
-header .menu div:hover{
-    background: #F5F5F5;
+header .menu .off:hover{
+    background: var(--color-div-sun);
 }
 /* Header .divs .divs*/
 
@@ -89,10 +90,6 @@ header .mode div{
     margin-bottom: 20px;
     border-radius: 50%;
     background: var(--background-header-dark);
-}
-
-header .mode .sun{
-    display: none;
 }
 
 .dark-mode-body{
@@ -109,12 +106,83 @@ header .mode .sun{
     color: var(--background-body-dark);
 }
 
-.sun-ative{
-    display: flex;
+.dark-mode-header-menu-div:hover{
+    background: var(--background-body-dark);;
 }
 
-.dark-off{
+.sun-on{
+    display: flex;
+    color: var(--background-body-dark);
+}
+
+.dark-off, .sun-off{
     display: none;
 }
 /* Header .divs .divs .divs*/
 
+/* Main */
+
+main{
+    display: flex;
+    padding: 0px 30px;
+}
+
+main div{
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    justify-content: center;
+}
+
+main .section h1{
+    font-size: 32.8pt;
+}
+
+main .section p{
+    text-align: justify;
+    font-weight: 400;
+    font-style: italic;
+}
+
+main .people{
+    text-align: center;
+}
+
+main .people i{
+    font-size: 150pt;
+}
+
+/* Button */
+
+button{
+    background: #FFFFFF;
+    border: none;
+    padding: 10px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+    border-radius: 7px;
+    font-family:  Montserrat, sans-serif;
+    transition: all 650ms ease-in-out;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+}
+
+/* Button */
+
+/* Social */
+main .social li{
+    margin-right: 20px;
+    font-size: 15pt;
+}
+
+main .social li a{
+    color: var(--color-header-dark);
+}
+
+main .social{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+}
