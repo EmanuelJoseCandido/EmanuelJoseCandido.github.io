@@ -75,6 +75,12 @@ header .menu div{
     cursor: pointer;
 }
 
+header .menu label{
+    text-align: center;
+    display: flex;
+    margin: 10px 10px 0px 10px;
+}
+
 header .menu .off:hover{
     background: var(--color-div-sun);
 }
@@ -107,7 +113,7 @@ header .mode div{
 }
 
 .dark-mode-header-menu-div:hover{
-    background: var(--background-body-dark);;
+    background: var(--background-body-dark);
 }
 
 .sun-on{
@@ -124,40 +130,50 @@ header .mode div{
 
 main{
     display: flex;
-    padding: 0px 30px;
+    flex-direction: column;
+    padding: 0px 15px;
+}
+main .main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
 }
 
-main div{
+main .main .section{
     display: flex;
     flex-direction: column;
     width: 42%;
     justify-content: center;
+    padding: 30px;
 }
 
-main .section h1{
+main .main .section h1{
     font-size: 32.8pt;
 }
 
-main .section p{
+main .main .section p{
     text-align: justify;
     font-weight: 400;
     font-style: italic;
 }
 
-main .people{
+main .main .people{
     text-align: center;
+    padding: 30px;
 }
 
-main .people i{
+main .main .people i{
     font-size: 150pt;
 }
 
 /* Button */
 
 button{
-    background: #FFFFFF;
+    background: #1A1A1A;
+    color: #FFFFFF;
     border: none;
-    padding: 10px;
+    padding: 10px 60px;
     box-shadow: 1px 2px 5px rgba(0,0,0,.31);
     border-radius: 7px;
     font-family:  Montserrat, sans-serif;
@@ -172,17 +188,41 @@ button:hover{
 /* Button */
 
 /* Social */
-main .social li{
+/* main .main  */.social li{
     margin-right: 20px;
     font-size: 15pt;
 }
 
-main .social li a{
+/* main .main */ .social li a{
     color: var(--color-header-dark);
 }
 
-main .social{
+/* main .main  */.social{
     display: flex;
     list-style: none;
     padding: 0px;
 }
+
+/*  */
+main .portfolio, main .contact, main .curriculum{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 88.2vw;
+    flex-direction: column;
+    font-size: 30pt;
+}
+
+main .portfolio ul, main .contact ul, main .curriculum ul{
+    margin-left: 20px;
+}
+
+main .portfolio i, main .contact i, main .curriculum i{
+    font-size: 30pt;
+}
+
+
+/*  */
+

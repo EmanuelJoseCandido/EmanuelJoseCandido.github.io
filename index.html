@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="../../Yetu/fontawesome-free-5.13.0-web/css/all.css">
     <title>Emanuel Cândido</title>
 </head>
 <body>
     <header>
-        <div class="user">
+        <div class="user" onclick="loadingDiv('main');">
             <i class="far fa-user"></i>
+            
         </div>
 
         <div class="menu">
-            <div class="off">
+            <div class="portfolio-menu off" onclick="loadingDiv('portfolio')">
                 <i class="far fa-address-card"></i>
                 <p>Portifolio</p>
             </div>
 
-            <div class="off">
+            <div class="contact-menu off" onclick="loadingDiv('contact')">
                 <i class="fas fa-mobile-alt"></i>
                 <p>Contacto</p>
             </div>
 
-            <div class="off">
+            <div class="curriculum-menu off" onclick="loadingDiv('curriculum')">
                 <i class="far fa-file-pdf"></i>
                 <p>CV</p>
             </div>
@@ -40,19 +42,38 @@
             </div>
         </div>
     </header>
-    <main class="body-main">
-        <div class="section">
-            <h1>Ola, <br>Eu sou Emanuel Cândido</h1>
+    <main>
+        <div class="main">
+            <div class="section">
+                <h1>Ola, <br>Eu sou Emanuel Cândido</h1>
 
-            <p>
-                Desenvolvedor Web motivado, com <span class="years"></span> anos de experiência progressiva no setor de Desenvolvimento de Web Sites. Oferecendo conhecimentos em PHP e JavaScript, com aptidão em UI/UX. Capaz de trabalhar bem com as pessoas a fim de encontrar soluções.
-            </p>
+                <p>
+                    Desenvolvedor Web motivado, com <span class="years"></span> anos de experiência progressiva no setor de Desenvolvimento de Web Sites. Oferecendo conhecimentos em PHP e JavaScript, com aptidão em UI/UX. Capaz de trabalhar bem com as pessoas a fim de encontrar soluções.
+                </p>
 
-            <div class="button">
-                <button>Contacta-me</button>
+                <div class="button">
+                    <button>Contacta-me</button>
+                </div>
+
+                <ul class="social">
+                    <li><a href="mailto:emanueljosecandido@hotmail.com"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/EmanuelJoseCandido"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/emanuel-c%C3%A2ndido-4b83941a3/"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
             </div>
+
+            <div class="people">
+                <i class="far fa-user"></i>
+            </div>
+        </div>
+
+
+        <div class="portfolio">
+            <h1>Portfólio</h1>
+            <p>Brevemente</p>
             
             <!-- <div class="programming-languages">
+                <h3>Skills</h3>
                 <i class="fab fa-js-square"></i>
                 <i class="fab fa-php"></i>
                 <i class="fab fa-java"></i>
@@ -65,8 +86,26 @@
             </ul>
         </div>
 
-        <div class="people">
-                <i class="far fa-user"></i>
+        <div class="contact">
+            <h1>Contacto</h1>
+            <p>Brevemente</p>
+
+            <ul class="social">
+                <li><a href="mailto:emanueljosecandido@hotmail.com"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://github.com/EmanuelJoseCandido"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/emanuel-c%C3%A2ndido-4b83941a3/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="curriculum">
+            <h1>Curriculum vitæ</h1>
+            <p>Brevemente</p>
+
+            <ul class="social">
+                <li><a href="mailto:emanueljosecandido@hotmail.com"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://github.com/EmanuelJoseCandido"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/emanuel-c%C3%A2ndido-4b83941a3/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
         </div>
     </main>
     <script src="js/main.js"></script>
