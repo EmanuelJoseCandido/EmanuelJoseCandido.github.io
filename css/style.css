@@ -132,6 +132,7 @@ main{
     display: flex;
     flex-direction: column;
     padding: 0px 15px;
+    width: 100%;
 }
 main .main{
     display: flex;
@@ -140,10 +141,16 @@ main .main{
     height: 100vh;
 }
 
+main .main div{
+    display: flex;
+    width: 50%;
+    justify-content: baseline;
+    align-items: stretch;
+}
+
 main .main .section{
     display: flex;
     flex-direction: column;
-    width: 42%;
     justify-content: center;
     padding: 30px;
 }
@@ -204,25 +211,43 @@ button:hover{
 }
 
 /*  */
-main .portfolio, main .contact, main .curriculum{
+main .projects, main .contact, main .curriculum{
     display: none;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100vh;
-    width: 88.2vw;
     flex-direction: column;
     font-size: 30pt;
 }
 
-main .portfolio ul, main .contact ul, main .curriculum ul{
+
+main .projects ul, main .contact ul, main .curriculum ul{
     margin-left: 20px;
 }
 
-main .portfolio i, main .contact i, main .curriculum i{
+main .container-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .projects i, main .contact i, main .curriculum i{
     font-size: 30pt;
 }
 
 
 /*  */
+
+/* Media Query of 1294px */
+@media screen and (max-width: 858px){
+    header{
+        padding: 0px 0px; 
+    }
+
+    main .main .section h1{
+        font-size: 31.8pt;
+    }
+}
 
