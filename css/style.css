@@ -41,17 +41,6 @@ header i{
 /* Header */
 
 /* Header .divs */
-header .user{
-    border-radius: 50%;
-    padding: 15px;
-    margin-top: 20px;
-    background: var(--background-header-dark);
-    color: var(--color-div-sun);
-}
-
-header .user i{
-    font-size: 20pt;
-}
 
 header .menu{
     display: flex;
@@ -95,7 +84,16 @@ header .mode div{
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 50%;
-    background: var(--background-header-dark);
+}
+
+header .mode .dark{
+    background: black;
+    color: var(--color-full);
+}
+
+header .mode .sun{
+    background: var(--background-header-sun);
+    color: var(--background-header-dark);
 }
 
 .dark-mode-body{
@@ -108,7 +106,7 @@ header .mode div{
     color: var(--color-div-sun);
 }
 
-.dark-mode-header-mode, .dark-mode-header-user{
+.dark-mode-header-about-menu{
     color: var(--background-body-dark);
 }
 
@@ -118,7 +116,6 @@ header .mode div{
 
 .sun-on{
     display: flex;
-    color: var(--background-body-dark);
 }
 
 .dark-off, .sun-off{
@@ -164,6 +161,7 @@ main .main .section p{
     text-align: justify;
     font-weight: 400;
     font-style: italic;
+    margin-bottom: 30px;
 }
 
 main .main .people{
@@ -240,7 +238,7 @@ main .projects i, main .blog i, main .contact i, main .curriculum i{
 
 /*  */
 
-/* Media Query of 1294px */
+/* Media Query of 858px */
 @media screen and (max-width: 858px){
     body{
         flex-direction: column;
@@ -248,22 +246,28 @@ main .projects i, main .blog i, main .contact i, main .curriculum i{
 
     /* Header */
     header{
-        flex-direction: row;
-        height: 15vh;
+        flex-direction: column-reverse;
+        height: 16vh;
     }
 
-    header .user{
-        margin-top: -20px;
+    header .mode div{
+        padding: 0px;
     }
 
-    header .user i, header .mode div i{
-        font-size: 12pt;
+    header .mode div i{
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    header .mode{
+        margin-top: 10px;
         padding: 0px;
     }
 
     header .menu{
         flex-direction: row;
         justify-content: baseline;
+        margin-top: -20px;
        
     }
 
@@ -313,7 +317,7 @@ main .projects i, main .blog i, main .contact i, main .curriculum i{
     }
 
     main .main .people i{
-        font-size: 100pt;
+        font-size: 80pt;
     }
 
 
@@ -339,3 +343,30 @@ main .projects i, main .blog i, main .contact i, main .curriculum i{
     }
 }
 
+@media screen and (max-width: 390px){
+    header .menu div i{
+        font-size: 18pt;
+    }
+
+    header .menu div{
+        padding: 10px 0px;
+    }
+
+    header .mode div i{
+        font-size: 10pt;
+    }
+
+    header .mode div{
+        padding: 0px;
+    }
+
+    main .main{
+        margin-top: -30px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    main .main .people{
+        display: none;
+    }
+}

@@ -4,8 +4,10 @@ selectElements('.dark').addEventListener('click', () => {
     selectElements('body').classList.add('dark-mode-body');
     selectElements('header').classList.add('dark-mode-header');
     selectElements('.mode i').classList.add('dark-mode-header-mode');
-    selectElements('.user i').classList.add('dark-mode-header-user');
     selectElements('div').classList.remove('.dark');
+
+    selectElements('.about-menu').classList.add('dark-mode-header-menu-div');
+    selectElements('.about-menu').classList.remove('off');
 
     selectElements('.projects-menu').classList.add('dark-mode-header-menu-div');
     selectElements('.projects-menu').classList.remove('off');
@@ -35,6 +37,9 @@ selectElements('.sun').addEventListener('click', () => {
     selectElements('.sun').classList.remove('sun-on');
     selectElements('.sun').classList.add('sun-off');
 
+    selectElements('.about-menu').classList.remove('dark-mode-header-menu-div');
+    selectElements('.about-menu').classList.add('off');
+
     selectElements('.projects-menu').classList.remove('dark-mode-header-menu-div');
     selectElements('.projects-menu').classList.add('off');
     selectElements('.blog-menu').classList.remove('dark-mode-header-menu-div');
@@ -58,7 +63,7 @@ calculateYears();
 
 
 function loadingDiv($value) {
-    const mainMenu = document.getElementsByClassName('user')[0];
+    const mainMenu = document.getElementsByClassName('about-menu')[0];
     const projectsMenu = document.getElementsByClassName('projects-menu')[0];
     const blogMenu = document.getElementsByClassName('blog-menu')[0];
     const contactMenu = document.getElementsByClassName('contact-menu')[0];
