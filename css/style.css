@@ -134,6 +134,7 @@ main{
     padding: 0px 15px;
     width: 100%;
 }
+
 main .main{
     display: flex;
     flex-direction: row;
@@ -211,7 +212,7 @@ button:hover{
 }
 
 /*  */
-main .projects, main .contact, main .curriculum{
+main .projects, main .blog, main .contact, main .curriculum{
     display: none;
     justify-content: center;
     align-items: center;
@@ -221,9 +222,8 @@ main .projects, main .contact, main .curriculum{
     font-size: 30pt;
 }
 
-
-main .projects ul, main .contact ul, main .curriculum ul{
-    margin-left: 20px;
+main .projects ul, main .blog ul, main .contact ul, main .curriculum ul{
+    margin-left: 15px;
 }
 
 main .container-div{
@@ -233,7 +233,7 @@ main .container-div{
     flex-direction: column;
 }
 
-main .projects i, main .contact i, main .curriculum i{
+main .projects i, main .blog i, main .contact i, main .curriculum i{
     font-size: 30pt;
 }
 
@@ -242,12 +242,100 @@ main .projects i, main .contact i, main .curriculum i{
 
 /* Media Query of 1294px */
 @media screen and (max-width: 858px){
+    body{
+        flex-direction: column;
+    }
+
+    /* Header */
     header{
-        padding: 0px 0px; 
+        flex-direction: row;
+        height: 15vh;
+    }
+
+    header .user{
+        margin-top: -20px;
+    }
+
+    header .user i, header .mode div i{
+        font-size: 12pt;
+        padding: 0px;
+    }
+
+    header .menu{
+        flex-direction: row;
+        justify-content: baseline;
+       
+    }
+
+    header .menu div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        width: 40px;
+        padding-bottom: 15px;
+    }
+
+    header .menu div p{
+        display: none;
+    }
+    
+    header div div i{
+        font-size:  20pt;
+    }
+    /* Header */
+
+    main{
+        padding: initial;
+        margin: initial;
+    }
+    
+    main .main div{
+        width: 85vw;  
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     main .main .section h1{
-        font-size: 31.8pt;
+        font-size: 20pt;
+    }
+
+    main .main{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: -50px;
+        height: 85vh;
+    }
+
+    main .main .section{
+        padding: 20px;
+    }
+
+    main .main .people i{
+        font-size: 100pt;
+    }
+
+
+    main .main .people{
+        padding: initial;
+        padding: 20px;
+    }
+
+    main .projects, main .blog, main .contact, main .curriculum{
+        height: 85vh;
+    }
+
+    main .projects h1, main .blog h1, main .contact h1, main .curriculum h1{
+        font-size: 30pt;
+    }
+
+    main .projects p, main .blog p, main .contact p, main .curriculum p{
+        font-size: 20pt;
+    }
+
+    main .projects i, main .blog i, main .contact i, main .curriculum i{
+        font-size: 20pt;
     }
 }
 

@@ -10,6 +10,9 @@ selectElements('.dark').addEventListener('click', () => {
     selectElements('.projects-menu').classList.add('dark-mode-header-menu-div');
     selectElements('.projects-menu').classList.remove('off');
 
+    selectElements('.blog-menu').classList.add('dark-mode-header-menu-div');
+    selectElements('.blog-menu').classList.remove('off');
+
     selectElements('.contact-menu').classList.add('dark-mode-header-menu-div');
     selectElements('.contact-menu').classList.remove('off');
 
@@ -34,6 +37,8 @@ selectElements('.sun').addEventListener('click', () => {
 
     selectElements('.projects-menu').classList.remove('dark-mode-header-menu-div');
     selectElements('.projects-menu').classList.add('off');
+    selectElements('.blog-menu').classList.remove('dark-mode-header-menu-div');
+    selectElements('.blog-menu').classList.add('off');
     selectElements('.contact-menu').classList.remove('dark-mode-header-menu-div');
     selectElements('.contact-menu').classList.add('off');
     selectElements('.curriculum-menu').classList.remove('dark-mode-header-menu-div');
@@ -55,17 +60,20 @@ calculateYears();
 function loadingDiv($value) {
     const mainMenu = document.getElementsByClassName('user')[0];
     const projectsMenu = document.getElementsByClassName('projects-menu')[0];
+    const blogMenu = document.getElementsByClassName('blog-menu')[0];
     const contactMenu = document.getElementsByClassName('contact-menu')[0];
     const curriculumMenu = document.getElementsByClassName('curriculum-menu')[0];
 
     const mainDiv = document.getElementsByClassName('main')[0];
     const projectsDiv = document.getElementsByClassName('projects')[0];
+    const blogDiv = document.getElementsByClassName('blog')[0];
     const contactDiv = document.getElementsByClassName('contact')[0];
     const curriculumDiv = document.getElementsByClassName('curriculum')[0];
 
     if($value === 'main'){
         mainDiv.style.display = 'flex';
         projectsDiv.style.display = 'none';
+        blogDiv.style.display = 'none';
         contactDiv.style.display = 'none';
         curriculumDiv.style.display = 'none';
 
@@ -77,6 +85,19 @@ function loadingDiv($value) {
     else if($value === 'projects'){
         mainDiv.style.display = 'none';
         projectsDiv.style.display = 'flex';
+        blogDiv.style.display = 'none';
+        contactDiv.style.display = 'none';
+        curriculumDiv.style.display = 'none';
+
+    /*     mainMenu.style.color = 'initial';
+        projectsMenu.style.color = 'initial';
+        contactDiv.style.color = 'initial';
+        curriculumDiv.style.color = 'initial'; */
+    }
+    else if($value === 'blog'){
+        mainDiv.style.display = 'none';
+        projectsDiv.style.display = 'none';
+        blogDiv.style.display = 'flex';
         contactDiv.style.display = 'none';
         curriculumDiv.style.display = 'none';
 
@@ -88,6 +109,7 @@ function loadingDiv($value) {
     else if($value === 'contact'){
         mainDiv.style.display = 'none';
         projectsDiv.style.display = 'none';
+        blogDiv.style.display = 'none';
         contactDiv.style.display = 'flex';
         curriculumDiv.style.display = 'none';
 
@@ -99,6 +121,7 @@ function loadingDiv($value) {
     else if($value === 'curriculum'){
         mainDiv.style.display = 'none';
         projectsDiv.style.display = 'none';
+        blogDiv.style.display = 'none';
         contactDiv.style.display = 'none';
         curriculumDiv.style.display = 'flex';
 
